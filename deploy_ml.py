@@ -9,7 +9,7 @@ from sklearn.preprocessing import LabelEncoder
 
 # Load model
 model_file = 'model_mbti.pkl'
-if not os.path.exists(model_path):
+if not os.path.exists(model_file):
     file_id = "1KH0lLDiAqXZmou9kjfYa5nKP7sRtUoZ6"  # Ganti dengan ID asli kamu
     url = f"https://drive.google.com/uc?id={file_id}"
     gdown.download(url, model_file, quiet=False)
