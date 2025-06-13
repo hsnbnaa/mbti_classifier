@@ -7,9 +7,11 @@ from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.preprocessing import LabelEncoder
 
 # Load model
-url = 'https://drive.google.com/uc?id=1KH0lLDiAqXZmou9kjfYa5nKP7sRtUoZ6'
 model_file = 'model_mbti.pkl'
-gdown.download(url, model_file, quiet=False)
+if not os.path.exists(model_path):
+    file_id = "1KH0lLDiAqXZmou9kjfYa5nKP7sRtUoZ6"  # Ganti dengan ID asli kamu
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, model_file, quiet=False)
 
 with open(model_file, 'rb') as file:
     classifier = pickle.load(file)
