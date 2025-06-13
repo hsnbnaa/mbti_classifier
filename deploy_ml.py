@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import gdown
+import os
 import streamlit as st
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.preprocessing import LabelEncoder
